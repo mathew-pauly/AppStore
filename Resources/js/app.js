@@ -51,10 +51,10 @@ function ClearSearchResult() {
 function PopulateApps() {
 
 
-    var _data = [{ "APP_ID": 0, "APP_NAME": "3MTracker", "APP_SHORT_NAME": "3MTracker", "APP_KEYWORDS": "3MTracker", "APP_ICON": "", "APP_URL": "https://3mtracker.cognizant.com" }, { "APP_ID": 1, "APP_NAME": "Sharepoint", "APP_SHORT_NAME": "Sharepoint", "APP_KEYWORDS": "Sharepoint", "APP_ICON": "", "APP_URL": "http://share-help.mmm.com/sp" },
+    var _data = [{ "APP_ID": 1, "APP_NAME": "MSDS Search", "APP_SHORT_NAME": "MSDS", "APP_KEYWORDS": "MSDS, Search", "APP_ICON": "msdssearch.gif", "APP_URL": "https://solutions.3m.com/wps/portal/3M/en_US/MSDS/Search?gsaAction=msdsSRA&type=ptn&msdsLocale=en_US" },
 {"APP_ID":2,"APP_NAME":"Estimator","APP_SHORT_NAME":"Estimator","APP_KEYWORDS":"Estimator","APP_ICON":"estimator.gif","APP_URL":"http://www.egroupnet.com/3M/expresstraining"},
 {"APP_ID":3,"APP_NAME":"Invoice Payment","APP_SHORT_NAME":"Invoice","APP_KEYWORDS":"Invoice, Payment","APP_ICON":"invoicepayment.gif","APP_URL":"http://ecommercetest7.3m.com/ebiz/invoicestatus"},
-{"APP_ID":4,"APP_NAME":"MSDS Search","APP_SHORT_NAME":"MSDS","APP_KEYWORDS":"MSDS, Search","APP_ICON":"msdssearch.gif","APP_URL":"https://solutions.3m.com/wps/portal/3M/en_US/MSDS/Search?gsaAction=msdsSRA&type=ptn&msdsLocale=en_US"},
+{ "APP_ID": 4, "APP_NAME": "Sharepoint", "APP_SHORT_NAME": "Sharepoint", "APP_KEYWORDS": "Sharepoint", "APP_ICON": "", "APP_URL": "http://share-help.mmm.com/sp" },
 {"APP_ID":5,"APP_NAME":"Quick Order","APP_SHORT_NAME":"Quick Order","APP_KEYWORDS":"Quick, Order","APP_ICON":"quickorder.gif","APP_URL":"https://3mtracker.cognizant.com/Remedy.aspx"},
 {"APP_ID":6,"APP_NAME":"RebuyList","APP_SHORT_NAME":"RebuyList","APP_KEYWORDS":"RebuyList","APP_ICON":"rebuylist.gif","APP_URL":"http://ecommercetest7.3m.com/ebiz/rebuylist"},
 {"APP_ID":7,"APP_NAME":"InfoCenter Java","APP_SHORT_NAME":"IPPR","APP_KEYWORDS":"InfoCenter , Java , IPPR","APP_ICON":"ippr.gif","APP_URL":"https://infocenter.3m.com/infocenter/IPPRHome.asp"},
