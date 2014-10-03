@@ -49,9 +49,9 @@ function ClearSearchResult() {
 }
 
 function PopulateApps() {
-    
 
-var _data =[{"APP_ID":1,"APP_NAME":"Sharepoint","APP_SHORT_NAME":"Sharepoint","APP_KEYWORDS":"Sharepoint","APP_ICON":"","APP_URL":"http://share-help.mmm.com/sp"},
+
+    var _data = [{ "APP_ID": 0, "APP_NAME": "3MTracker", "APP_SHORT_NAME": "3MTracker", "APP_KEYWORDS": "3MTracker", "APP_ICON": "", "APP_URL": "https://3mtracker.cognizant.com" }, { "APP_ID": 1, "APP_NAME": "Sharepoint", "APP_SHORT_NAME": "Sharepoint", "APP_KEYWORDS": "Sharepoint", "APP_ICON": "", "APP_URL": "http://share-help.mmm.com/sp" },
 {"APP_ID":2,"APP_NAME":"Estimator","APP_SHORT_NAME":"Estimator","APP_KEYWORDS":"Estimator","APP_ICON":"estimator.gif","APP_URL":"http://www.egroupnet.com/3M/expresstraining"},
 {"APP_ID":3,"APP_NAME":"Invoice Payment","APP_SHORT_NAME":"Invoice","APP_KEYWORDS":"Invoice, Payment","APP_ICON":"invoicepayment.gif","APP_URL":"http://ecommercetest7.3m.com/ebiz/invoicestatus"},
 {"APP_ID":4,"APP_NAME":"MSDS Search","APP_SHORT_NAME":"MSDS","APP_KEYWORDS":"MSDS, Search","APP_ICON":"msdssearch.gif","APP_URL":"https://solutions.3m.com/wps/portal/3M/en_US/MSDS/Search?gsaAction=msdsSRA&type=ptn&msdsLocale=en_US"},
@@ -165,7 +165,7 @@ function PopulateSearchApps(apps) {
         var $div = $(create_DIV.replace(SHORT_NAME, APPS[apps[i]].APP_SHORT_NAME).replace(NAME, APPS[apps[i]].APP_NAME).replace(COLOR_CODE, Color_Codes[GetRandValue(Color_Codes.length)]).replace(APP_ID, APPS[apps[i]].APP_ID).replace(APP_KEYWORDS, filter_keywords).replace(APP_URL, APPS[apps[i]].APP_URL));
         $("#search").isotope('insert', $div);
     }
-
+    
     ClearSearchResult();
 }
 
@@ -296,7 +296,8 @@ $(document).ready(function () {
         } else {
             window.frames[0].stop();
         }
-
+       
+        $("#txt_search").parent().hide();
     });
 
 

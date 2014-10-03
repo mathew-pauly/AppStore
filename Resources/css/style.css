@@ -238,7 +238,11 @@ blockquote {
 {
 color:White;
 float:right;
-padding:10px;    
+padding:10px;
+vertical-align:top;
+margin-top:-10px;
+float:left;
+display:block;    
 }
 
 /*==== 2.4 Fullscreen Background ====*/
@@ -254,7 +258,7 @@ padding:10px;
     font-weight:normal;
     z-index:999;
     font-family:CooperBlackB!important;
-    width:1068px;
+   
 }
 .header a
 {
@@ -262,9 +266,7 @@ padding:10px;
 }
 
 @media screen and (min-height:600px){
-    .header{
-        position:fixed;
-    }
+    
 }
 .header a:hover{
     text-decoration:none;
@@ -337,15 +339,15 @@ padding:10px;
     margin-left:8%;
     overflow:visible!important;
 }
-.vertical .header{
+    eader{
     margin-left: 8%;
     margin-right: 8%;
     width:100%;
     padding-left:24px;
 }
 
-.vertical .section:first-child{
-    margin-top:200px!important;
+.vertical .section{
+    margin-top:100px!important;
 }
 
 .li-selected
@@ -2366,8 +2368,8 @@ Vertical
     padding-left:24px;
 }
 
-.vertical .section:first-child{
-    margin-top:200px!important;
+.vertical .section{
+    margin-top:150px!important;
 }
 
 /*==== Section Responsive ====*/
@@ -2394,7 +2396,7 @@ Vertical
 
 @media screen and (max-width:480px){
     .vertical .section{
-        margin-left:0!important;
+        margin-left:15%!important;
     }
 
     .vertical .w3{
