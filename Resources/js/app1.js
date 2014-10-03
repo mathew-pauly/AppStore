@@ -3,12 +3,11 @@ var allRecordsCount = 0;
 var APPS = undefined;
 var Section_Click = { "Link": 0 };
 
-var Color_Codes = ["red","green", "blue", "orange", "yellow", "purple", "turquoise","brown","gray","darkblue"];
-var tile_effect = ["title-fadeout","title-horizontalcenter","title-verticalcenter","title-indent","title-scaleup"];
-var icon_effect1 = ["icon-featurecw","icon-featureccw","icon-featurefade","icon-scaleup","icon-scaledown","icon-scaledownrotate360ccw","icon-scaleuprotate360cw","icon-fadeoutscaledown","icon-scaledownrotate360cw","icon-featurefade","icon-flip","icon-featurecw"];
+var Color_Codes = ["red", "green", "blue", "orange", "yellow", "purple", "turquoise", "brown", "gray", "darkblue"];
+var tile_effect = ["title-fadeout", "title-horizontalcenter", "title-verticalcenter", "title-indent", "title-scaleup"];
+var icon_effect1 = ["icon-featurecw", "icon-featureccw", "icon-featurefade", "icon-scaleup", "icon-scaledown", "icon-scaledownrotate360ccw", "icon-scaleuprotate360cw", "icon-fadeoutscaledown", "icon-scaledownrotate360cw", "icon-featurefade", "icon-flip", "icon-featurecw"];
 var font_color = ["redf", "greenf", "bluef", "yellowf", "orangef", "redf", "greenf", "darkbluef", "yellowf", "orangef"];
-var icon_effect2 = [" title-indent icon-fadeoutscaleup", "title-indent icon-fadeoutscaledown", "title-fade icon-scaleuprotate360cw", "title-fade icon-scaleuprotate360ccw", "title-fade icon-scaledownrotate360cw", "title-fade icon-scaledownrotate360ccw", "title-scaleup icon-scaledown", "title-scaledown icon-scaleup", "title-fadeout icon-featurecw", "title-fadeout icon-featureccw", "title-verticalcenter icon-featurefade", "title-horizontalcenter icon-flip", "title-center icon-fadeout icon-flip"];
-var icon_effect = [" title-verticalcenter icon-fadeoutscaleup", "title-verticalcenter icon-fadeoutscaledown", "title-verticalcenter icon-scaleuprotate360cw", "title-verticalcenter icon-scaleuprotate360ccw", "title-verticalcenter icon-scaledownrotate360cw", "title-verticalcenter icon-scaledownrotate360ccw", "title-verticalcenter icon-scaledown", "title-verticalcenter icon-scaleup", "title-verticalcenter icon-featurecw", "title-verticalcenter icon-featureccw", "title-verticalcenter icon-featurefade", "title-verticalcenter icon-flip", "title-verticalcenter icon-fadeout icon-flip"];
+var icon_effect = [" title-indent icon-fadeoutscaleup", "title-indent icon-fadeoutscaledown", "title-fade icon-scaleuprotate360cw", "title-fade icon-scaleuprotate360ccw", "title-fade icon-scaledownrotate360cw", "title-fade icon-scaledownrotate360ccw", "title-scaleup icon-scaledown", "title-scaledown icon-scaleup", "title-fadeout icon-featurecw", "title-fadeout icon-featureccw", "title-verticalcenter icon-featurefade", "title-horizontalcenter icon-flip", "title-center icon-fadeout icon-flip"];
 
 var NAME = "#NAME";
 var SHORT_NAME = "#SHORT_NAME";
@@ -49,61 +48,43 @@ function ClearSearchResult() {
 }
 
 function PopulateApps() {
-    
 
-var _data =[{"APP_ID":1,"APP_NAME":"Sharepoint","APP_SHORT_NAME":"Sharepoint","APP_KEYWORDS":"Sharepoint","APP_ICON":"","APP_URL":"http://share-help.mmm.com/sp"},
-{"APP_ID":2,"APP_NAME":"Estimator","APP_SHORT_NAME":"Estimator","APP_KEYWORDS":"Estimator","APP_ICON":"estimator.gif","APP_URL":"http://www.egroupnet.com/3M/expresstraining"},
-{"APP_ID":3,"APP_NAME":"Invoice Payment","APP_SHORT_NAME":"Invoice","APP_KEYWORDS":"Invoice, Payment","APP_ICON":"invoicepayment.gif","APP_URL":"http://ecommercetest7.3m.com/ebiz/invoicestatus"},
-{"APP_ID":4,"APP_NAME":"MSDS Search","APP_SHORT_NAME":"MSDS","APP_KEYWORDS":"MSDS, Search","APP_ICON":"msdssearch.gif","APP_URL":"https://solutions.3m.com/wps/portal/3M/en_US/MSDS/Search?gsaAction=msdsSRA&type=ptn&msdsLocale=en_US"},
-{"APP_ID":5,"APP_NAME":"Quick Order","APP_SHORT_NAME":"Quick Order","APP_KEYWORDS":"Quick, Order","APP_ICON":"quickorder.gif","APP_URL":"https://3mtracker.cognizant.com/Remedy.aspx"},
-{"APP_ID":6,"APP_NAME":"RebuyList","APP_SHORT_NAME":"RebuyList","APP_KEYWORDS":"RebuyList","APP_ICON":"rebuylist.gif","APP_URL":"http://ecommercetest7.3m.com/ebiz/rebuylist"},
-{"APP_ID":7,"APP_NAME":"InfoCenter Java","APP_SHORT_NAME":"IPPR","APP_KEYWORDS":"InfoCenter , Java , IPPR","APP_ICON":"ippr.gif","APP_URL":"https://infocenter.3m.com/infocenter/IPPRHome.asp"},
-{"APP_ID":8,"APP_NAME":"CDMS-CTI","APP_SHORT_NAME":"CDMS-CTI","APP_KEYWORDS":"CDMS, CTI","APP_ICON":"","APP_URL":"http://intra3.mmm.com/cdms-cti/login.do"},
-{"APP_ID":9,"APP_NAME":"WERCS","APP_SHORT_NAME":"WERCS","APP_KEYWORDS":"WERCS, CDMS","APP_ICON":"","APP_URL":"http://wercssirprod/wercs.chemingtool.web"},
-{"APP_ID":10,"APP_NAME":"TOXDOCS","APP_SHORT_NAME":"TOXDOCS","APP_KEYWORDS":"TOXDOCS, CDMS","APP_ICON":"","APP_URL":"http://jeseprd22.mmm.com/toxdocs/login.do"},
-{"APP_ID":11,"APP_NAME":"Products on the Web","APP_SHORT_NAME":"POW","APP_KEYWORDS":"Products , POW","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":12,"APP_NAME":"Pow Portlet","APP_SHORT_NAME":"Pow Portlet","APP_KEYWORDS":"Pow , Portlet","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":13,"APP_NAME":"Product Comparison Portlet","APP_SHORT_NAME":"PCP","APP_KEYWORDS":"Product , Comparison , Portlet  , PCP","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":14,"APP_NAME":"Digitization Component Framework","APP_SHORT_NAME":"DCF","APP_KEYWORDS":"Digitization , Component , Framework , DCF","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":15,"APP_NAME":"Price Broker Component","APP_SHORT_NAME":"PBC","APP_KEYWORDS":"Price , Broker , Component , PBC","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":16,"APP_NAME":"Search Navigation and Product Selection","APP_SHORT_NAME":"SNAPS","APP_KEYWORDS":"Search , Navigation , Product , Selection , SNAPS","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":17,"APP_NAME":"Datamart","APP_SHORT_NAME":"Datamart ","APP_KEYWORDS":"Datamart","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":18,"APP_NAME":"Enterprise Network Login","APP_SHORT_NAME":"ENL","APP_KEYWORDS":"Enterprise , Network , Login , ENL","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":19,"APP_NAME":"Enterprise Network Login Portlet","APP_SHORT_NAME":"ENLP","APP_KEYWORDS":"Enterprise , Network , Login , Portlet , ENLP","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":20,"APP_NAME":"Enterprise Website Creation & Delivery","APP_SHORT_NAME":"EWCD","APP_KEYWORDS":"Enterprise , Website , Creation , Delivery , EWCD","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":21,"APP_NAME":"Visitor Management","APP_SHORT_NAME":"VSRM","APP_KEYWORDS":"Visitor , Management , VSRM","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":22,"APP_NAME":"Database Portlet ","APP_SHORT_NAME":"Portlet ","APP_KEYWORDS":"Database , Portlet ","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":23,"APP_NAME":"3M Source ","APP_SHORT_NAME":"3M Source ","APP_KEYWORDS":"3M Source","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":24,"APP_NAME":"Learn3M ","APP_SHORT_NAME":"Learn3M ","APP_KEYWORDS":"Learn3M","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":25,"APP_NAME":"InfoCenter","APP_SHORT_NAME":"InfoCenter","APP_KEYWORDS":"InfoCenter","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":26,"APP_NAME":"GSM","APP_SHORT_NAME":"GSM","APP_KEYWORDS":"GSM","APP_ICON":"","APP_URL":"http://gsm.mmm.com"},
-{"APP_ID":27,"APP_NAME":"Enterprise Directory Component Services","APP_SHORT_NAME":"EDCS","APP_KEYWORDS":"Enterprise , Directory , Component , Services , EDCS","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":28,"APP_NAME":"Global Search Appliance","APP_SHORT_NAME":"GSA","APP_KEYWORDS":"Global , Search , Appliance , GSA","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":29,"APP_NAME":"Infobus ","APP_SHORT_NAME":"Infobus ","APP_KEYWORDS":"Infobus","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":30,"APP_NAME":"Credit Card Solutions Suite","APP_SHORT_NAME":"CCSS","APP_KEYWORDS":"Credit , Card , Solutions , Suite , CCSS","APP_ICON":"","APP_URL":"#"},
-{"APP_ID":31,"APP_NAME":"eMetrics Dashboard","APP_SHORT_NAME":"EMDB","APP_KEYWORDS":"eMetrics , Dashboard , EMDB","APP_ICON":"","APP_URL":"#"}];
-allRecordsCount = _data.length;
+    jQuery.ajax({
+        url: "Resources/js/json/apps.json",
+        dataType: "json",
+        beforeSend: function (xhr) {
+            if (xhr.overrideMimeType) {
+                xhr.overrideMimeType("application/json");
+            }
+        },
+        error: function (xhr, errText, err) {
+            alert(err);
+        },
+        success: function (_data, okText, xhr) {
+
+            allRecordsCount = _data.length;
             APPS = _data;
+
+        }, async: false
+    });
 
     var create_DIV = "<div class='tile #COLOR w1 h1 #TILE_EFFECT #ICON_EFFECT isotope-item' style='position: absolute; left: 0px; top: 0px;'>"
                             + "<a class='link' href='#APP_URL' target='_blank' data-scroll='scrollto' data-app-id='#APP_ID'>"
                             + "<i class='fa #APP_ICON'></i>"
-                            + "<p class='title fsmall'>#NAME</p>"
+                            + "<p class='title'>#NAME</p>"
                             + "</a>"
                           + "</div>";
 
     for (var i = 0; i < allRecordsCount; i++) {
 
-        var icon = APPS[i].APP_ICON == "" ? "" : APPS[i].APP_ICON;
-        var $div = $(create_DIV.replace(NAME, APPS[i].APP_SHORT_NAME).replace(COLOR_CODE, Color_Codes[GetRandValue(Color_Codes.length)]).replace(TILE_EFFECT, tile_effect[GetRandValue(TILE_EFFECT.length)]).replace(ICON_EFFECT, icon_effect[GetRandValue(icon_effect.length)]).replace(APP_ID, APPS[i].APP_ID).replace(APP_ICON, icon).replace(APP_ICON, icon).replace(APP_URL,APPS[i].APP_URL));
+        var icon = APPS[i].APP_ICON == "" ? "fa-th-large" : APPS[i].APP_ICON;
+        var $div = $(create_DIV.replace(NAME, APPS[i].APP_SHORT_NAME).replace(COLOR_CODE, Color_Codes[GetRandValue(Color_Codes.length)]).replace(TILE_EFFECT, tile_effect[GetRandValue(TILE_EFFECT.length)]).replace(ICON_EFFECT, icon_effect[GetRandValue(icon_effect.length)]).replace(APP_ID, APPS[i].APP_ID).replace(APP_ICON, icon).replace(APP_ICON, icon).replace(APP_URL, APPS[i].APP_URL));
         $("#start").isotope('insert', $div);
 
-//        if (icon != "")
-//            $("a[data-app-id=" + APPS[i].APP_ID + "]").parent().append("<img class='app-icon-center' src='Resources/img/icons/" + APPS[i].APP_ICON + "'/>");
-//        else 
-            $("a[data-app-id=" + APPS[i].APP_ID + "]").parent().append("<img class='app-icon-center1' src='Resources/img/icons/3m.png'/>");
+        if (icon != "fa-th-large")
+            $("a[data-app-id=" + APPS[i].APP_ID + "]").parent().append("<img class='app-icon-center' src='Resources/img/icons/" + APPS[i].APP_ICON + "'/>");
     }
-   
+
 }
 
 function ShowSearchContainer(appscount) {
@@ -118,7 +99,7 @@ function ShowSearchContainer(appscount) {
 
     if (appscount == 1)
         create_HEADER = "Search Results :: [" + appscount + " App]";
-    
+
     $("#search .block-title").html(create_HEADER);
 
     if (appscount == 0) {
@@ -144,10 +125,10 @@ function PopulateSearchApps(apps) {
 
     ShowSearchContainer(apps.length);
 
-            create_DIV = "<div class='tile #APP_KEYWORDS success transparent imagetile tileshow w2 h1 isotope-item'>"
+    create_DIV = "<div class='tile #APP_KEYWORDS success transparent imagetile tileshow w2 h1 isotope-item'>"
                     + "<div class='active' >"
                         + "<div class='caption #COLOR'>"
-                            + "<a class='link' data-scroll='scrollto' href='#APP_URL' target='_blank' data-app-id='#APP_ID'>"
+                            + "<a class='link' data-scroll='scrollto' href='#Link' data-app-id='#APP_ID'>"
                                 + "<div class='title'><i class='fa fa-file-text fa-2x'></i></div>"
                                 + "<div class='caption-text twoline'>"
                                     + "#NAME"
@@ -158,11 +139,11 @@ function PopulateSearchApps(apps) {
                     + "</div>"
                 + "</div>";
 
-  
+
 
     for (var i = 0; i < apps.length; i++) {
         var filter_keywords = APPS[apps[i]].APP_KEYWORDS.replace(" ,", "").replace(", ", "").replace(",", "").toLowerCase() + " " + APPS[apps[i]].APP_ID;
-        var $div = $(create_DIV.replace(SHORT_NAME, APPS[apps[i]].APP_SHORT_NAME).replace(NAME, APPS[apps[i]].APP_NAME).replace(COLOR_CODE, Color_Codes[GetRandValue(Color_Codes.length)]).replace(APP_ID, APPS[apps[i]].APP_ID).replace(APP_KEYWORDS, filter_keywords).replace(APP_URL, APPS[apps[i]].APP_URL));
+        var $div = $(create_DIV.replace(SHORT_NAME, APPS[apps[i]].APP_SHORT_NAME).replace(NAME, APPS[apps[i]].APP_NAME).replace(COLOR_CODE, Color_Codes[GetRandValue(Color_Codes.length)]).replace(APP_ID, APPS[apps[i]].APP_ID).replace(APP_KEYWORDS, filter_keywords));
         $("#search").isotope('insert', $div);
     }
 
@@ -171,20 +152,20 @@ function PopulateSearchApps(apps) {
 
 function PopulateSearchAppsList(keyword) {
     var SearchRecordCount = 0;
-    
+
     var create_LI = "<li class='#FONT_COLOR' data-app-id='#APP_ID'><i class='fa fa-th-large'></i>&nbsp;#NAME</li>";
 
     APP_LIST = new Array();
-    
+
     for (var j = 0; j < allRecordsCount; j++) {
         if (APPS[j].APP_KEYWORDS.toLowerCase().indexOf(keyword.toLowerCase()) > -1)
             APP_LIST.push(j);
         else if (APPS[j].APP_NAME.toLowerCase().indexOf(keyword.toLowerCase()) > -1)
             APP_LIST.push(j);
     }
-    
+
     SearchRecordCount = APP_LIST.length;
-    
+
     for (var i = 0; i < SearchRecordCount; i++) {
         $("#search_result ul").append(create_LI.replace(NAME, APPS[APP_LIST[i]].APP_NAME).replace(FONT_COLOR, font_color[GetRandValue(font_color.length)]).replace(APP_ID, APPS[APP_LIST[i]].APP_ID));
     }
