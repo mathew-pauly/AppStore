@@ -41,6 +41,7 @@ function HideSearchResult() {
 }
 
 function ClearSearchResult() {
+    $("#btn_search").hide();
     setTimeout(function () {
         $("#search_result").hide();
         $("#txt_search").val('');
@@ -290,14 +291,17 @@ $(document).ready(function () {
         $(".on-demand-container").hide();
         $(this).parent().hide();
         $("#start").show();
+        $("#btn_search").show();
+        $("#txt_search").parent().hide();
         $("#iframe_link").attr("src", "about: blank");
         if (navigator.appName == 'Microsoft Internet Explorer') {
             window.frames[0].document.execCommand('Stop');
         } else {
             window.frames[0].stop();
         }
-       
-        $("#txt_search").parent().hide();
+
+        
+        
     });
 
 

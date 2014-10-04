@@ -14,13 +14,21 @@
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
         
         <link rel="stylesheet" href="Resources/css/style.css" type="text/css">
+        <style type="text/css" media="screen">
+   @font-face {font-family: "CooperBlackB"; src:url("../font/COPRGTB.ttf") ;}
+   .header a
+{
+    font-family:CooperBlackB!important;
+}
+</style>
+
     </head>
     <body class="vertical">
 
         <!-- LOGO -->
         <div class="header">
             <h1>
-            
+            <div class="header-icons " style="display:none;"><a class='link' id="btn_back" data-scroll="scrollto" href="#start"><i class='fa fa-home'></i></a></div>
                 <div style="float:left;">
                 <a data-scroll="scrollto" href="#start" style="text-decoration:none;">
                     3M APP STORE
@@ -29,18 +37,18 @@
             
             
            
-            <div id="btn_search" class="header-icons"><i  title="Search Apps" class='fa fa-search'></i></div>
-            <div class="header-icons " style="display:none;"><a class='link' id="btn_back" data-scroll="scrollto" href="#start"><i class='fa fa-arrow-circle-left'></i></a></div>
-            <div style="display:none;float:left;width:290px;color:White;cursor:pointer;padding-left:10px;padding-right:10px;">
-            <input id="txt_search" placeholder="Search Apps" data-selected-app="" type="text" style="text-align:left;font-size:24px;color:gray;height:40px;width:250px;"/>
-             <div id="search_result" style="width:250px;display:none;height:70px;overflow-y:auto;float:left;font-size:12px;background-color:gray;cursor:pointer;line-height:24px;">
+            <div id="btn_search" class="header-icons" style="padding-left:10px;"><i  title="Search Apps" class='fa fa-search'></i></div>
+            <br />
+            <div style="display:none;width:90%;color:White;cursor:pointer;padding-left:10px;padding-right:10px;">
+            <input id="txt_search" placeholder="Search Apps" data-selected-app="" type="text" style="text-align:left;font-size:24px;color:gray;height:40px;width:100%"/>
+             <div id="search_result">
                     <ul class="move" style="padding:5px;">
                    
                     </ul>
             </div>
             </div>
            
-            <div class="header-icons " style="display:none;"><a class='link' id="btn_home" data-scroll="scrollto" href="#start"><i class='fa fa-home'></i></a></div>
+            
             
             </h1>
            
@@ -51,7 +59,7 @@
 
             <section class="clearfix section isotope" id="start">
 
-                <h3 class="block-title"></h3>
+                <h3 class="block-title">Applications</h3>
             </section>
             
 

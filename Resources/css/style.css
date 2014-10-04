@@ -1,5 +1,5 @@
-@font-face {font-family:CooperBlackB; src:url("../font/COPRGTB.eot");}
-@font-face {font-family:CooperBlackB; src:url("../font/COPRGTB.ttf");}
+@font-face {font-family: "CooperBlackB"; src:url("../font/COPRGTB.eot");}
+@font-face {font-family: "CooperBlackB"; src:url("../font/COPRGTB.ttf") ;}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -237,12 +237,26 @@ blockquote {
 .header-icons
 {
 color:White;
-float:right;
-padding:10px;
+float:left;
+
+padding-right:10px;
 vertical-align:top;
-margin-top:-10px;
+
 float:left;
 display:block;    
+}
+
+#search_result
+{
+    width:100%;
+    display:none;
+    height:70px;
+    overflow-y:auto;
+    float:left;
+    font-size:12px;
+    background-color:rgba(0,0,0,0.8);
+    cursor:pointer;
+    line-height:24px;
 }
 
 /*==== 2.4 Fullscreen Background ====*/
@@ -258,7 +272,7 @@ display:block;
     font-weight:normal;
     z-index:999;
     font-family:CooperBlackB!important;
-   
+   width:100%;  
 }
 .header a
 {
@@ -347,7 +361,7 @@ display:block;
 }
 
 .vertical .section{
-    margin-top:100px!important;
+    margin-top:75px!important;
 }
 
 .li-selected
@@ -2361,11 +2375,13 @@ Vertical
     margin-left:8%;
     overflow:visible!important;
 }
-.vertical .header{
-    margin-left: 6%;
-    margin-right: 6%;
+.vertical .header
+{
+    clear:both;
+    margin-left: 0%;
+    margin-right: 0%;
     width:100%;
-    padding-left:24px;
+   
 }
 
 .vertical .section{
